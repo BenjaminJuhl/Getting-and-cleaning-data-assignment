@@ -14,6 +14,13 @@ This repository contaims my submission for the programming assignment of the "Ge
 ## Instructions
 The run_analysis.R script needs the original data files in the UCI HAR Dataset directory as they were downloaded und unzipped from the UC Irvine Machine Learning Repository and are available in this repository. The script needs an "R" programming environment and the "dplyr" package, so please make sure both are available when you want to run it.
 
-Within R, simply source the script to run it (source("run_analysis.R")), or coppy/paste the script to the command line. The script will then read the original data files, combine the separate dataset specific files to one table, and then combine the two datasets to one single data frame. Activity values and variable names will be replaced with more descriptive values. The combinedy, tidy dataset will be written to "UCI HAR tidy data.txt". The dataset is also available in R as "tidy.data".
+Within R, simply source the script to run it (source("run_analysis.R")), or coppy/paste the script to the command line. The script will then do the following:
+- read the original data files
+- combine the separate dataset specific files to one table
+- combine the two datasets to one single data frame
+- activity values will be replaced with activity descriptions from activity_labels.txt
+- variable names will be replaced with more descriptive values.
+- The combinedy, tidy dataset will be written to "UCI HAR tidy data.txt". The dataset is also available in R as "tidy.data".
 
-A second independent dataset will be created through grouping by subjects and activities and subsequently summarizing the means of all columns for the groups. This independent, tidy dataset will be saved to "UCI HAR subject activity means.txt". The dataset is also available in R as "mean.data".
+- A second independent dataset will be created through grouping by subjects and activities and subsequently summarizing the means of all columns for the groups.
+- This independent, tidy dataset will be saved to "UCI HAR subject activity means.txt". The dataset is also available in R as "mean.data".

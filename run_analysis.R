@@ -52,6 +52,7 @@ labels <- sub("Jerk",".jerk",labels)
 labels <- sub("Acc",".acceleration",labels)
 labels <- gsub("Body","body",labels)
 labels <- gsub("Gyro","gyro",labels)
+labels <- gsub("Gravity","gravity",labels)
 names(tidy.data) <- labels # the tidy dataset is complete
 rm(labels,colindex)
 

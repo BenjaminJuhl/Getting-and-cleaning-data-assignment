@@ -60,5 +60,5 @@ rm(labels,colindex)
 mean.data <- summarize_each(group_by(tidy.data,subject,activity),funs(mean))
 
 # write both datasets to files
-write.table(tidy.data,"UCI HAR tidy data.txt")
-write.table(mean.data,"UCI HAR subject activity means.txt")
+write.table(tidy.data,"UCI HAR tidy data.txt",row.name=FALSE)
+write.table(mean.data,"UCI HAR subject activity means.txt",row.name=FALSE)
